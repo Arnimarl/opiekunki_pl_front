@@ -1,0 +1,30 @@
+===== FORMS =====
+
+Fieldsety i alerty
+	W pliku forms.html jest form z elementami fieldset. Są to elementy w stanie przed waliacją. Po zwalidowaniu mogą zmienić kolorystyke w zgodzie z intuicyjną konwencją UI. W pliku forms_showed_alerts.html są przykłady fieldsetów po walidacji z włączonymi alertami. 
+
+	1. Aby fieldset przyjął porządany stan należy dopiąć mu odpowiednią klasę z poniższych:
+	.has-danger
+	.has-warning
+	.has-success
+
+	2. W razie potrzeby można też włączyć znajdujący się bezpośrednio za fieldsetem, przynależny mu alert.
+	Aby to zrobić, należy dodać klasę definiującą jego stan, która jednocześnie wyświetla go:
+	.alert-danger
+	.alert-warning
+	.alert-success *
+	* raczej nie wyświetlałbym dla żandego z fieldsetów alertu sukces po porawnym zwalidowaniu, jedynie pozostawał przy dodaniu klasy has-success
+
+Modal
+	W pliku modal_showed.html jest modal do wyświetlania tekstu regulaminu (włączony klasą .show). 
+
+	1. Aby go pokazać należy do klasy do elementu nadrzędnego (.custom_modal) dodać klasę .show
+	2. Aby go zamknąć należy nałożyć event click na następującu selektor:
+	.custom_modal .custom_fade .custom_modal_window .close
+	i odpiąć klasę .show od .custom_modal
+	3. Aby go zamknąć klikając w tło należy nałożyć event click na następującu selektor:
+	.custom_modal .custom_fade
+	i odpiąć klasę .show od .custom_modal
+	4. Aby go zamknąć klikając w przycisk akceptacji regulaminu należy nałożyć event click na następującu selektor:
+	.custom_modal .custom_fade .custom_modal_window .regulations .accept_and_close
+	i odpiąć klasę .show od .custom_modal 
